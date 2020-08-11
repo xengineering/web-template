@@ -8,6 +8,10 @@ A template project for dynamic web applications.
 ## Usage
 
 ```
+    # Install Flask and waitress with your linux package manager.
+    # Otherwise you could use pip:
+    pip3 install --user Flask waitress
+
     git clone https://github.com/xengineering/web-template.git
     cd web-template
     python3 main.py

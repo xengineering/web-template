@@ -2,7 +2,21 @@
 
 # Web Template
 
-A template project for dynamic web applications. **This project is not ready to use - please be patient.**
+A template project for dynamic web applications.
+
+
+## Usage
+
+```
+    git clone https://github.com/xengineering/web-template.git
+    cd web-template
+    python3 main.py
+
+    # switch to another terminal
+
+    curl http://localhost:8080  # test with curl
+    firefox http://localhost:8080  # test with firefox
+```
 
 
 ## Used Technologies

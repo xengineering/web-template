@@ -1,0 +1,111 @@
+
+
+/*
+    web-template - A Template Project for dynamic Web Applications.
+
+    Copyright (C) 2020  xengineering
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published
+    by the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
+
+/*
+  General Stuff
+*/
+
+* {
+  box-sizing: border-box;  /* Include padding and border in the element's total width and height */
+}
+
+body {
+  margin: 0;  /* avoid ugly white margin */
+  font-family: Arial, Helvetica, sans-serif;  /* select a nice font */
+}
+
+.menu {
+  background-color: black;
+}
+
+.content {
+  background-color: white;
+}
+
+.menu a {
+  color: lightgray;
+  text-decoration: none;  /* disable ugly underlined links */
+}
+
+/* How should the link behave if the mouse is over this item? */
+.menu a:hover {
+  background-color: lightgray;
+  color: black;
+}
+
+
+
+/*
+  Default Geometry / Geometry for Phones ('Mobile First Development')
+*/
+
+.content {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: justify;
+}
+
+.menu a {
+  display: block;
+  padding: 16px;
+  text-align: center;
+}
+
+
+
+/*
+  Geometry for Tablets
+*/
+
+@media only screen and (min-width: 600px) {
+  /* empty --> same rules as for phones */
+}
+
+
+
+/*
+  Geometry for Desktops
+*/
+
+@media only screen and (min-width: 768px) {
+
+  .menu {
+    height: 100%;
+    width: 200px;
+    position: fixed;  /* position fixed in top left corner (with offset) */
+    top: 0px;  /* disable the offset from top left corner */
+  }
+
+  .menu a {
+    text-align: left;
+  }
+
+  .content {
+    margin-left: 200px;  /* transparent margin on the left for .menu */
+  }
+
+  .content *{  /* everything inside the content container */
+    max-width: 960px;  /* maximum width on desktops should be 960 px */
+    margin-left: auto;  /* center it with margin */
+    margin-right: auto;  /* center it with margin */
+  }
+}

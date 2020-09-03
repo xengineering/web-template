@@ -42,6 +42,14 @@ git branch -M master
 git push -uf origin master
 ```
 
+### Get the latest Updates from this template Project
+```
+git checkout template
+git pull
+git checkout master
+git merge template
+```
+
 
 ## Used Technologies
 

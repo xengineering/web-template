@@ -35,10 +35,11 @@ git branch --unset-upstream master
 ```
 
 ### Add a Remote for your specific Project
+**This could delete data on your remote (git push -f)!** It is no problem if the remote repository is empty (e.g. if you just created it on GitHub).
 ```
-git remote add origin <myproject-upstream-url>
+git remote add origin <myproject-upstream-url>  # use ssh url here
 git branch -M master
-git push -u origin master
+git push -uf origin master
 ```
 
 

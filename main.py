@@ -30,19 +30,14 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return current_app.send_static_file('index.html')
+    return render_template('index.html')
 
 
-@app.route('/style.css')
-def style():
-    return current_app.send_static_file('style.css')
-
-
-@app.route('/favicon.ico')
-def favicon():
-    return current_app.send_static_file('favicon.ico')
+@app.route('/static/css/<css_file>')
+def css(css_file):
+    return current_app.send_static_file("css/{}".format(css_file))
 
 
 if __name__ == '__main__':
     serve(app, listen='*:8080')  # production server
-    #app.run()  # test server
+    #app.run()  # debug server - NOT FOR PRODUCTION!

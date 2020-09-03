@@ -38,6 +38,11 @@ def css(css_file):
     return current_app.send_static_file("css/{}".format(css_file))
 
 
+@app.route('/favicon.ico')
+def favicon():
+    return current_app.send_static_file("img/favicon.ico")
+
+
 if __name__ == '__main__':
     serve(app, listen='*:8080')  # production server
     #app.run()  # debug server - NOT FOR PRODUCTION!

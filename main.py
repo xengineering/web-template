@@ -44,5 +44,6 @@ def favicon():
 
 
 if __name__ == '__main__':
-    serve(app, listen='*:8080')  # production server
+    serve(app, listen='*:8080')  # production server / bind to port
+    #serve(app, unix_socket='/run/web-template/unix.sock')  # production server / unix domain socket
     #app.run()  # debug server - NOT FOR PRODUCTION!

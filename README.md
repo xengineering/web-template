@@ -29,25 +29,12 @@ firefox http://localhost:8080  # test with firefox
 git clone https://github.com/xengineering/web-template.git myproject
 cd myproject
 git remote rename origin template
-git branch template  # create branch for the template
-git branch --set-upstream-to=template/master template
-git branch --unset-upstream master
-```
-
-### Add a Remote for your specific Project
-**This could delete data on your remote (git push -f)!** It is no problem if the remote repository is empty (e.g. if you just created it on GitHub).
-```
-git remote add origin <myproject-upstream-url>  # use ssh url here
-git branch -M master
-git push -uf origin master
 ```
 
 ### Get the latest Updates from this template Project
 ```
-git checkout template
-git pull
-git checkout master
-git merge template
+git fetch template
+git merge template/master
 ```
 
 

@@ -33,21 +33,21 @@ body {
   font-family: Arial, Helvetica, sans-serif;  /* select a nice font */
 }
 
-.menu {
+.xmenu {
   background-color: black;
 }
 
-.content {
+.xcontent {
   background-color: white;
 }
 
-.menu a {
+.xmenu a {
   color: lightgray;
   text-decoration: none;  /* disable ugly underlined links */
 }
 
 /* How should the link behave if the mouse is over this item? */
-.menu a:hover {
+.xmenu a:hover {
   background-color: lightgray;
   color: black;
 }
@@ -58,13 +58,13 @@ body {
   Default Geometry / Geometry for Phones ('Mobile First Development')
 */
 
-.content {
+.xcontent {
   padding-left: 20px;
   padding-right: 20px;
   text-align: justify;
 }
 
-.menu a {
+.xmenu a {
   display: block;
   padding: 16px;
   text-align: center;
@@ -88,22 +88,22 @@ body {
 
 @media only screen and (min-width: 768px) {
 
-  .menu {
+  .xmenu {
     height: 100%;
     width: 200px;
     position: fixed;  /* position fixed in top left corner (with offset) */
     top: 0px;  /* disable the offset from top left corner */
   }
 
-  .menu a {
+  .xmenu a {
     text-align: left;
   }
 
-  .content {
-    margin-left: 200px;  /* transparent margin on the left for .menu */
+  .xcontent {
+    margin-left: 200px;  /* transparent margin on the left for .xmenu */
   }
 
-  .content *{  /* everything inside the content container */
+  .xcontent *{  /* everything inside the content container */
     max-width: 960px;  /* maximum width on desktops should be 960 px */
     margin-left: auto;  /* center it with margin */
     margin-right: auto;  /* center it with margin */

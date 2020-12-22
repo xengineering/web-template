@@ -1,0 +1,11 @@
+
+{
+	"deployments":[
+		{
+			"host":"example.com",
+			"username":"exampleuser",
+			"webroot":"/srv/http/example.com/public/"
+		}
+	]
+}
+
